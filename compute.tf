@@ -2,13 +2,13 @@
 resource "aws_instance" "sample_ec2_hardcoded" {
   ami           = "ami-0b72821e2f351e396"
   instance_type = "t2.micro"
-  key_name      = "luqman-useast1-13072024" # Replace key_name with your own keypair name in the corresponding region
+  key_name      = "khai keys" # Replace key_name with your own keypair name in the corresponding region
   subnet_id     = "subnet-09acf5721004f526c" # Replace subnet_id with your own vpc's subnet id (see Subnets in AWS console)
   associate_public_ip_address = true
   vpc_security_group_ids = [aws_security_group.ec2_sg.id]
 
   tags = {
-    Name = "luqman-webserver-terraform" # Replace Name with your own preferred EC2 instance name
+    Name = "khai-webserver-terraform" # Replace Name with your own preferred EC2 instance name
   }
 }
 
